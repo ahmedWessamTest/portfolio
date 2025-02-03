@@ -1,0 +1,83 @@
+<div class="nav-container min-vh-100 w-100" [class.active]="navStatus">
+  <div class="navbar position-fixed top-0 start-0 w-100">
+    <div
+      class="menu w-100 my-0 mx-auto d-flex justify-content-between align-items-center text-white"
+    >
+      <h3 class="logo fw-bold text-uppercase">
+        Ahmed<span class="fw-lighter">Wessam</span>
+      </h3>
+      <div
+        (click)="openNav()"
+        class="hamburger-menu d-flex justify-content-end align-items-center"
+      >
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div
+      class="main position-relative w-100 start-0 overflow-hidden"
+      (click)="openNav()"
+    >
+      <div
+        class="min-vh-100 w-100 position-relative d-flex justify-content-center align-items-center"
+      >
+        <router-outlet />
+      </div>
+    </div>
+
+    <!-- <div class="shadow one"></div>
+    <div class="shadow two"></div> -->
+  </div>
+
+  <div class="links">
+    <ul>
+      <li>
+        <a
+          style="--i: 0.05s"
+          class="relative"
+          routerLink="home"
+          routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          style="--i: 0.1s"
+          class="relative"
+          routerLink="projects"
+          routerLinkActive="active"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          style="--i: 0.15s"
+          class="relative"
+          routerLink="experience"
+          routerLinkActive="active"
+          >Experience</a
+        >
+      </li>
+      <li>
+        <a
+          style="--i: 0.2s"
+          class="relative"
+          routerLink="blog"
+          routerLinkActive="active"
+          >Blog</a
+        >
+      </li>
+      <li>
+        <a
+          style="--i: 0.25s"
+          class="relative"
+          routerLink="contact"
+          routerLinkActive="active"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+@import 'variables';
+
+//  Media Query Mixin
+@mixin respond($breakpoint) {
+  @media  #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// Overlay Mixin
+@mixin overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Prefixes Mixin - Auto Add Prefixes To Properties
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $prefixes}: $value;
+  }
+  #{$property}: $value;
+}
